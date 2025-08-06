@@ -72,7 +72,7 @@ def get_candle():
     URL = f"https://financialmodelingprep.com/api/v3/historical-chart/1hour/{TICKER}?apikey={API_KEY}"
     
     # REST GET 리퀘스트를 보내고 응답(adict형태 json) 반환
-    response = requests.get(url)
+    response = requests.get(URL)
     data = response.json()    # 각 봉에 대해 (시가, 고가, 저가, 종가, 날짜)가 포함된 리스트
     
     # 데이터를 판다스 DataFrame(엑셀 비슷한 구조) 으로 변환
