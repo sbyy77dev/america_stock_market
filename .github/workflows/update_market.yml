@@ -19,7 +19,7 @@ jobs:
           python-version: '3.x'
 
       - name: 패키지 설치
-        run: pip install requests pandas matplotlib
+        run: pip install requests pandas matplotlib python-dotenv
       
       - name: 시장 데이터, chart, README 갱신
         env: 
