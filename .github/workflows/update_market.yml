@@ -24,7 +24,7 @@ jobs:
       - name: 시장 데이터, chart, README 갱신
         env: 
           FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
-        run: python stock_market.python
+        run: python stock_market.py
       - name: 커밋 & 푸시
         run: |
           git config --global user.name "github-actions[bot]"
