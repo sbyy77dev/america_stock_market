@@ -1,6 +1,6 @@
 import requests
 import json
-import pandas as pandas
+import pandas as pd
 import matplotlib.pyplot
 from datetime import datetime
 import os 
@@ -40,7 +40,7 @@ def save_history(history):
 # ---------- 새로 받아온 시세 기록에 추가 ----------
 def update_history(prices):
     history = load_history() # 기존 데이터 history에 저장
-    time_str = datetime.utcnow().strftime('%Y-%m-%d %H:%M')
+    time_str = datetime.now((timezone.utc)).strftime('%Y-%m-%d %H:%M')
     history.append({
         'time': time_str, **prices
     }) # prices는 내가 받아온 여러 주식의 가격 키:값 형태
