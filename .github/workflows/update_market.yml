@@ -1,7 +1,7 @@
 name: Update 30 opening/closing price of ETF
 on:
   schedule:
-    - cron: '20 13, 20 * * 1-5' # 미국장 오픈(1:30), 마감(20:00) UTC, 평일
+    - cron: "20 13, 20 * * 1-5" # 미국장 오픈(1:30), 마감(20:00) UTC, 평일
   workflow_dispatch:  # 수동 실행 가능
   
 jobs:
