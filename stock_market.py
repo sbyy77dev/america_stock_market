@@ -91,6 +91,7 @@ def get_candle():
         ylabel='Price (USD)',                   # y축 단위
         savefig=IMG_FILE_Q                        # 파일로 저장하고, 화면에 띄우지 않음
     )
+    print("캔들스틱 저장 위치:", os.path.abspath(IMG_FILE_Q))
 
 
 def update_readme(history):
