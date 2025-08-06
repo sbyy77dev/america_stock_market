@@ -1,8 +1,8 @@
 name: Update 30 opening/closing price of ETF
 on:
   schedule:
-    - cron: '30 13 * * 1-5'  # 월~금 13:30(UTC) → 한국 22:30(서머타임)
-    - cron: '00 20 * * 1-5'  # 월~금 20:00(UTC) → 한국 05:00(서머타임)
+    - cron: "30 13 * * 1-5"  # 월~금 13:30(UTC) → 한국 22:30(서머타임)
+    - cron: "00 20 * * 1-5"  # 월~금 20:00(UTC) → 한국 05:00(서머타임)
   workflow_dispatch:  # 수동 실행 가능
   
 jobs:
