@@ -15,7 +15,7 @@ README_FILE = "README.md"
 
 # --------- 실시간 시세 데이터 요청 함수 ----------
 def fetch_quotes():
-    URL = f"https://financialmodeliingprep.com/api/v3/quote/{','.join(TICKERS)}?apikey={API_KEY}"
+    URL = f"https://financialmodelingprep.com/api/v3/quote/{','.join(TICKERS)}?apikey={API_KEY}"
     resp = requests.get(URL)
     data = resp.json()
     result = {}
