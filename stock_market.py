@@ -1,7 +1,7 @@
 import requests
 import json
 import pandas as pd
-import matplotlib.pyplot
+import matplotlib.pyplot as plt
 from datetime import datetime, timezone
 import os 
 from dotenv import load_dotenv
@@ -59,7 +59,7 @@ def make_chart(history):
     plt.xticks(rotation=90)
     plt.tight_layout()
     plt.title('최근 30회 장시작, 마감 시세 변화')
-    plt.title('가격(USD)')
+    plt.ylabel('가격(USD)')
     plt.savefig('market_chart.png')
     plt.close()    
 
@@ -68,7 +68,7 @@ def update_readme(history):
         f.write("## 미국 ETF 최근 30회 시세\n\n")
         f.write("![최근 시세변화](./market_chart.png)\n\n")
         f.write("| 시각(UTC) | " + " | ".join(TICKERS) + " |\n")
-        f,write("| --- " * (len(TICKERS)+1) + "|\n")
+        f.write("| --- " * (len(TICKERS)+1) + "|\n")
         for row in history:
             nums = [f"{row.get(ticker, ''):,.2f}" for ticker in TICKERS]
             f.write(f"| {row['time']} | {' | '.join(nums)} |\n")
