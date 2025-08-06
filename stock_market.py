@@ -65,7 +65,7 @@ def make_chart(history):
     plt.tight_layout()
     plt.title('최근 30회 장시작, 마감 시세 변화')
     plt.ylabel('가격(USD)')
-    plt.savefig('market_chart.png')
+    plt.savefig('qld_candlestick.png')
     plt.close()
 
 def get_candle():
