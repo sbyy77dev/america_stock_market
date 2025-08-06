@@ -89,7 +89,7 @@ def get_candle():
         style='yahoo',                          # 차트 스타일, 'charles', 'yahoo' 등 다양
         title=f"{TICKER} 최근 Hourly Candlestick",   # 그래프 제목
         ylabel='Price (USD)',                   # y축 단위
-        savefig=IMG_FILE                        # 파일로 저장하고, 화면에 띄우지 않음
+        savefig=IMG_FILE2                        # 파일로 저장하고, 화면에 띄우지 않음
     )
 
 
