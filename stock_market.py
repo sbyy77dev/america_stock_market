@@ -16,7 +16,7 @@ IMG_FILE = "market_chart.png"
 README_FILE = "README.md"
 # ---------- For CandleStick Chart ----------
 TICKER = "QLD"
-IMG_FILE_Q = "./qld_candlestick.png"
+IMG_FILE_Q = "qld_candlestick.png"
 
 # --------- 실시간 시세 데이터 요청 함수 ----------
 def fetch_quotes():
