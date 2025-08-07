@@ -68,7 +68,7 @@ def make_chart(history):
     plt.savefig('market_chart.png')
     plt.close()
 
-def get_candle():
+def get_candle():    # 이후 파라미터로 만들고 싶은 주식을 넘겨서 재사용 가능하게 커스텀
     URL = f"https://financialmodelingprep.com/api/v3/historical-chart/1hour/{TICKER}?apikey={API_KEY}"
     
     # REST GET 리퀘스트를 보내고 응답(adict형태 json) 반환
@@ -86,7 +86,7 @@ def get_candle():
     mpf.plot(
         df[['open', 'high', 'low', 'close']],   # 캔들 입력 데이터
         type='candle',                          # 봉차트(candle) 타입
-        style='yahoo',                          # 차트 스타일, 'charles', 'yahoo' 등 다양
+        style='ibd',                          # 차트 스타일
         title=f"{TICKER} 최근 Hourly Candlestick",   # 그래프 제목
         ylabel='Price (USD)',                   # y축 단위
         savefig=IMG_FILE_Q                        # 파일로 저장하고, 화면에 띄우지 않음
